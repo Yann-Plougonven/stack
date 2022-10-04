@@ -13,12 +13,6 @@ class StackTests(unittest.TestCase):
         create an empty Stack for all tests
         """
         self.stack=Stack()
-    
-    def tearDown(self):
-        """
-        call this at the end of each tests, wheter the test fail or not
-        """
-        self.stack=Stack()
 
     def testPush(self):
         """

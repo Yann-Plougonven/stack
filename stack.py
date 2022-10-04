@@ -5,39 +5,41 @@ class Stack:
     """An implementation of a Stack"""
     
     def __init__(self):
-        raise NotImplementedError
+        self._elements=[]
     
     def isEmpty(self):
         """
         Return True if the stack is empty, False otherwise
         """
-        raise NotImplementedError
+        return self._elements == []
     
     def push(self, element):
         """
         Push an element into the stack
         return the stack
         """
+        self._elements.append(element)
+        return self  # On return la pile elle même, pas la liste
 
     def pop(self):
         """
         pop an element from the stack
         return the poped element
         """
-        raise NotImplementedError
+        return self._elements.pop()
 
     def summit(self):
         """
-        red the top element of the stack without removing it.
+        read the top element of the stack without removing it.
         return the top element.
         """
-        raise NotImplementedError
+        return self._elements[-1]
 
     def size(self):
         """
         read the size of the stack
         return the size as an integer.
         """
-        raise NotImplementedError
+        return len(self._elements)
         
         
