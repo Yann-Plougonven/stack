@@ -11,7 +11,10 @@ class Stack:
         """
         Return True if the stack is empty, False otherwise
         """
-        return self._elements == []
+        if self._elements == []:
+            return True
+        elif self._elements != []:
+            return False
     
     def push(self, element):
         """
@@ -41,5 +44,8 @@ class Stack:
         return the size as an integer.
         """
         return len(self._elements)
+    
+    def __len__(self):
+        return self.size()
         
         

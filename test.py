@@ -77,6 +77,21 @@ class StackTests(unittest.TestCase):
         self.stack=Stack()
         with self.assertRaises(IndexError):
             self.stack.summit()
+            
+    def test__len__(self):
+        """
+        Check if len method works
+        """
+        maPile = self.stack
+        self.assertEqual(len(maPile), 0, "La pile devrait être égale à 0, mais c'est pas le cas")
+        maPile.push("coucou")
+        self.assertEqual(len(maPile), 1, "La pile devrait être égale à 1, mais c'est pas le cas")
+        
+    def testAaa(self):
+        """
+        Test if
+        """
+        
         
 if __name__ == '__main__':
     unittest.main()        
