@@ -1,6 +1,6 @@
 from stack import Stack  # Ne pas mettre le .py à la fin
-expressions = [('3', '4', '*', '2', '+'), ('2', '4', '+', '6', '-', '1', '+'), ('1', '19', '+', '2', '-'), ('0', '2', '-', '2', '+', '10', '-'), ('2', '3', '4', '+', '*')]
-operateurs = ('+', '-', '*')
+expressions = [('3', '4', '*', '2', '+'), ('2', '4', '+', '6', '-', '1', '+'), ('1', '19', '+', '2', '-'), ('0', '2', '-', '2', '+', '10', '-'), ('2', '3', '4', '+', '*'), ('3', '2', '**')]
+operateurs = ('+', '-', '*', '^')
 resultats = []
 
 
@@ -11,7 +11,7 @@ def resultat(expression):
     nbs_pour_op = []
     result = 0  # On initialise le résultat de l'opération en cours de traitement à 0.
     for char in expression:  # Pour chaque caractère de l'expression
-        if char in operateurs:  # Si '+', '-', '*'
+        if char in operateurs:  # Si '+', '-', '*', '^'
             op1 = float(p.pop())
             op2 = float(p.pop())
 
@@ -23,6 +23,9 @@ def resultat(expression):
 
             elif char == "*":
                 result = op1 * op2
+                
+            elif char == "^":
+                result = op2 ** op1
 
             p.push(result)
 
