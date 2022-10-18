@@ -47,5 +47,9 @@ class Stack:
     
     def __len__(self):
         return self.size()
-        
-        
+    
+    def show(self):
+        """
+        return the stack as a tuple (tuple because it's not editable
+        """
+        return tuple(self._elements)
